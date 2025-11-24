@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhatism - Donation</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/donation.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="icon" href="img/essential/fav.ico" type="image/x-icon">
+    
+    <style>
+
+        .methods-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .method {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        .method img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .method p {
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+        .method .name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .method .address {
+            font-family: monospace;
+            color: #555;
+            word-break: break-all;
+        }
+        .method .note {
+            color: #777;
+            font-style: italic;
+        }
+
+        /* Responsive for small devices */
+        @media (max-width: 768px) {
+            .methods-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="img/essential/fav.ico" alt="Favicon" class="favicon">
+            <span style="letter-spacing: 0.04em;">NHATISM</span>
+        </div>
+        <div class="header-right">
+            <span id="ict-time" style="color: #888;"></span>
+        </div>
+    </div>
+
+	<div class="container">
+		<h1>Donation</h1>
+		<br>
+		<div class="methods-grid">
+		    <div class="method">
+		        <img src="img/donation/momo.jpg">
+		        <p class="name">via MOMO (napas)</p>
+		        <p class="note">Note: DONATION</p>
+		    </div>
+		    
+		    <div class="method">
+		        <img src="img/donation/bnb.jpg">
+		        <p class="name">via USDT</p>
+		        <p class="address"><b>0xe8EEb98</b>Bd3143c86558b05230321B58A903<b>03Ba1</b></p>
+		        <p class="note">BNB Smart Chain (BEP20)</p>
+		    </div>
+		</div>
+	</div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var options = { timeZone: 'Asia/Ho_Chi_Minh', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            var timeString = now.toLocaleTimeString([], options);
+            document.getElementById('ict-time').textContent = " ICT " + timeString;
+        }
+
+        // Initial call to set the time
+        updateTime();
+
+        // Update the time every second
+        setInterval(updateTime, 1000); // 1000 milliseconds = 1 second
+    </script>
+</body>
+
+</html>
