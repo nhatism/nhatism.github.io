@@ -1,7 +1,3 @@
-.container {
-    margin-top: 0rem;
-}
-
 .methods-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -43,7 +39,7 @@
 /* Responsive for small devices */
 @media (max-width: 768px) {
     .container {
-	    margin-top: 0rem;
+	    margin-top: 30rem;
        }
     .methods-grid {
         grid-template-columns: 1fr;
