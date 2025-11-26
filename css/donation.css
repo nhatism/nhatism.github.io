@@ -39,7 +39,7 @@
 /* Responsive for small devices */
 @media (max-width: 768px) {
     .container {
-	    margin-top: 5rem;
+	    margin-top: 10rem;
        }
     .methods-grid {
         grid-template-columns: 1fr;
